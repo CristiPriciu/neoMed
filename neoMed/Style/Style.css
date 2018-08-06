@@ -1,0 +1,158 @@
+﻿#header {
+    background-color: #6B7A8F;
+    height: 60px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#navbar {
+    margin-top: 1px;
+}
+
+#content {
+    margin-top: 55px;
+}
+
+
+#footer {
+    border-radius: 6px;
+    background-color: #6B7A8F;
+    height: 30px;
+    text-align: center;
+}
+
+/*Navbar*/
+
+/*Strip the ul of padding and list styling*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: inline;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+    display: inline-block;
+    float: left;
+    margin-right: 1px;
+}
+
+/*Style for menu links*/
+.button {
+    display: block;
+    min-width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font: 400 20px 'Helvetica Neue';
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #fff;
+    background: #A9A9A9;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 150ms;
+    border: none !important;
+}
+
+    /*Hover state for top level links*/
+    .button:hover {
+        background: #EFEFEF;
+    }
+
+/*Style for dropdown links*/
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+    /*Hover state for dropdown links*/
+    li:hover ul a:hover {
+        background: #A9A9A9;
+        color: #fff;
+    }
+
+/*Hide dropdown links until they are needed*/
+li ul {
+    display: none;
+}
+
+    /*Make dropdown links vertical*/
+    li ul li {
+        display: block;
+        float: none;
+    }
+
+        /*Prevent text wrapping*/
+        li ul li a {
+            width: auto;
+            min-width: 100px;
+            padding: 0 20px;
+        }
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+    color: #fff;
+    background: #19c589;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+/*Hide checkbox*/
+#show-menu {
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px) {
+    /*Make dropdown links appear inline*/
+    ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    li {
+        margin-bottom: 1px;
+    }
+        /*Make all menu links full width*/
+        ul li, li a {
+            width: 100%;
+        }
+    /*Display 'show menu' link*/
+    .show-menu {
+        display: block;
+    }
+
+    .navbar-line {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        ;
+        margin: 6px auto 0 auto;
+    }
+}
